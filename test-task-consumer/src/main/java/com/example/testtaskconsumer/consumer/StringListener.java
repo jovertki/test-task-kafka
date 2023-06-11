@@ -27,7 +27,7 @@ public class StringListener {
         log.debug("Received string: {}", stringDto);
         var result = enrichedStringsService.saveEnrichedString(stringDto.getWord());
         log.debug("String saved: {}", result);
-        log.info("PROFILER: Enriched messaging: {}, count: {}", ChronoUnit.SECONDS.between(startDateTime, LocalDateTime.now()), atomicInteger.incrementAndGet());
+        log.info("PROFILER: Enriched messaging lasts: {} seconds, messages consumed: {}", ChronoUnit.SECONDS.between(startDateTime, LocalDateTime.now()), atomicInteger.incrementAndGet());
     }
 
 }
