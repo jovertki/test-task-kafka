@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      retries: 100
+    bootstrap-servers: localhost:29092
+server:
+  port: 9093
+
+kafka-topic:
+  strings-under-100: strings.under.100
+
+sheduled:
+  strings-under-100: 1
